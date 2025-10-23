@@ -1,0 +1,130 @@
+body{
+    font-family: 'ROBOTO' ,sans-serif;
+    overflow-x: hidden;
+}
+:root {
+    --couleur :1px 1px 4px 1px rgb(212, 209, 209);
+}
+/*défini le positionnement des éléments enfants*/
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lang1 {
+    box-shadow: var(--couleur);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.lang1:hover {
+    transform: translateY(4px);
+    color: rgb(40, 241, 225);
+    
+}
+.lang1:active{
+    transform: scale(0.99);
+}
+/*defini le style du texte de presentation*/
+.presentation{
+    box-shadow: var(--couleur);
+    text-align: center;
+    width: 70%;
+    height: 50%;
+    margin-top: 5px;
+}
+hr{
+    background-color: blue;
+    width: 70%;
+}
+footer{
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #bec2c5;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: 77% 100%;
+  background-position: center;
+  height: 50vh;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  transition: background-image 0.1s ease;
+}
+#decouvrir{
+    background-color: #4eda71;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+#decouvrir:hover{
+    background-color: rgb(72, 197, 103);
+    transform: translateY(-2px);
+}
+#decouvrir:active{
+    transform: scale(0.95);
+}
+#decouvrir a {
+    text-decoration: none;
+    color: black;
+}
+
+
+img{
+    width: 75px;
+    height: 75px;
+}
+#img{
+    margin-left: 20px;
+}
+.paragraphe {
+    /* Centre le texte, mais pas le bloc lui-même */
+    text-align: center; 
+}
+.main p{
+    margin-left: 110px;
+    text-align: left;
+}
+/* Si vous voulez centrer le bloc .paragraphe lui-même, vous pouvez aussi le faire avec marge auto (s'il a une largeur définie) */
+.presentation {
+    width: 60%; /* Doit avoir une largeur */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    /* Raccourci: margin: 0 auto; */
+}
+@media screen and (orientation: portrait) and (max-width: 675px){
+    .main {
+        margin-left: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .main p {
+        margin-left: 0;
+        text-align: left;
+    }
+    .presentation {
+        padding: 40px;
+        justify-content: flex-start;
+    }
+    .image{
+        width: 250px;
+    }
+}

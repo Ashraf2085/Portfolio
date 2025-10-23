@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <?php require_once(__DIR__ . '/header.php') ?>
+    <div class="main">
+        <div class="image">
+            <h1 style="color: rgb(255, 255, 255);">Mon site moderne</h1>
+            <button id="decouvrir"><a href="site.php">Découvrir</a></button>
+        </div>
+        <div class="presentation">
+            <h3>Présentation</h3>
+            <div class="p1">
+                <p>Bonjour, je m'appelle Ashraf et je suis développeur web.</p>
+                <p>J'ai commencé mon apprentissage dans ce métier il y a environ 6 mois.</p>
+                <p>Au début, je n'avais aucune connaissance dans ce domaine. J'ai commencé à</p>
+                <p>consulter des sites dont OpenClassrooms fait partie.</p>
+                <p>J'ai d'abord appris les langages essentiels : HTML5 et CSS3.</p>
+                <p>Après avoir maîtrisé ces deux langages, j'ai commencé à apprendre d'autres langages,</p>
+                <p>comme JavaScript, Python, PHP et MySQL.</p>
+                <p>Je me suis concentré sur ces langages pour approfondir mes connaissances.</p>
+            </div>
+            <hr>
+            <h3>Motivation pour ce domaine</h3>
+            <p>Ce qui m'a motivé à commencer ce domaine est le fait que</p>
+            <p>cette technologie offre de nombreuses possibilités de programmation et de langages,</p>
+            <p>ce qui permet de tester beaucoup de nouvelles fonctionnalités.</p>
+            <p>Cette technologie ne s'arrêtera sûrement pas là.</p>
+            
+            <h3>Langages maîtrisés</h3>
+            <div class="lang1"><img src="image/html.png" alt="Image HTML5"><p>HTML5</p></div>
+            <div class="lang1"><img src="image/css.png" alt="Image CSS3"><p>CSS3</p></div>
+            <div class="lang1"><img src="image/java_script.png" alt="Image JavaScript"><p>JavaScript</p></div>
+            <div class="lang1"><img id="img" src="image/python.png" alt="Image Python"><p>Python</p></div>
+            <div class="lang1"><img id="img" src="image/php.png" alt="Image PHP"><p>PHP</p></div>
+            <div class="lang1"><img id="img" src="image/Mysql.png" alt="Image MySQL"><p>MySQL</p></div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Site Moderne
+    </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
