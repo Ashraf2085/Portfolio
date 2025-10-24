@@ -91,9 +91,7 @@ img{
     width: 75px;
     height: 75px;
 }
-#img{
-    margin-left: 20px;
-}
+
 .paragraphe {
     /* Centre le texte, mais pas le bloc lui-même */
     text-align: center; 
@@ -110,6 +108,7 @@ img{
     margin-bottom: 60px;
     /* Raccourci: margin: 0 auto; */
 }
+/*commence header*/
 header{
     display: flex;
     flex-direction: row;
@@ -141,6 +140,13 @@ header{
 .menu a{
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease;
+}
+.menu a:hover {
+    color: rgb(180, 241, 233);
+}
+.menu li {
+    cursor: pointer;
 }
 .menu ul li:hover > ul{
     display: block;
@@ -160,6 +166,24 @@ header{
         flex-direction: column;
         width: 95vw;
     }
+}
+/*fin header*/
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* caché par défaut */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 100;
+}
+#topBtn:hover {
+    background-color: #555;
 }
 @media screen and (orientation: portrait) and (max-width: 675px){
     .main {
