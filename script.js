@@ -6,7 +6,7 @@ const images = [
 let index = 0
 const back = document.querySelector('.image')
 function changeBackground() {
-    back.style.backgroundImage = back.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${images[index]})`;
+    back.style.backgroundImage = `url(${images[index]})`;
     index = (index + 1) % images.length
 }
 changeBackground()
