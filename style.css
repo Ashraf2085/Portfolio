@@ -35,13 +35,19 @@ body{
 .lang1:active{
     transform: scale(0.99);
 }
-/*defini le style du texte de presentation*/
+/* Si vous voulez centrer le bloc .paragraphe lui-même, vous pouvez aussi le faire avec marge auto (s'il a une largeur définie) */
+/*defini le style du texte de la classe presentation*/
 .presentation{
     box-shadow: var(--couleur);
     text-align: center;
     width: 70%;
     height: 50%;
     margin-top: 5px;
+    width: 60%; /* Doit avoir une largeur */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    /* Raccourci: margin: 0 auto; */
 }
 hr{
     background-color: blue;
@@ -55,6 +61,7 @@ footer{
 
 .image {
   background-repeat: no-repeat;
+  background-image: linear-gradient(0.4, 0.8, 0.8, 1);
   background-size: 77% 100%;
   background-position: center;
   height: 50vh;
@@ -100,14 +107,7 @@ img{
     margin-left: 110px;
     text-align: left;
 }
-/* Si vous voulez centrer le bloc .paragraphe lui-même, vous pouvez aussi le faire avec marge auto (s'il a une largeur définie) */
-.presentation {
-    width: 60%; /* Doit avoir une largeur */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    /* Raccourci: margin: 0 auto; */
-}
+
 /*commence header*/
 header{
     display: flex;
@@ -164,7 +164,7 @@ header{
     header{
         display: flex;
         flex-direction: column;
-        width: 95vw;
+        width: 90vw;
     }
 }
 /*fin header*/
@@ -181,9 +181,14 @@ header{
     cursor: pointer;
     font-size: 18px;
     z-index: 100;
+    transition: all 0.3s ease;
 }
 #topBtn:hover {
     background-color: #555;
+    transform: translateY(2px);
+}
+#topBtn:active {
+    transform: scale(0.95);
 }
 @media screen and (orientation: portrait) and (max-width: 675px){
     .main {
