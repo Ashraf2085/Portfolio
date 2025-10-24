@@ -30,13 +30,12 @@ body{
 .lang1:hover {
     transform: translateY(4px);
     color: rgb(40, 241, 225);
-    
 }
 .lang1:active{
     transform: scale(0.99);
 }
-/* Si vous voulez centrer le bloc .paragraphe lui-même, vous pouvez aussi le faire avec marge auto (s'il a une largeur définie) */
 /*defini le style du texte de la classe presentation*/
+/* Si vous voulez centrer le bloc .paragraphe lui-même, vous pouvez aussi le faire avec marge auto (s'il a une largeur définie) */
 .presentation{
     box-shadow: var(--couleur);
     text-align: center;
@@ -61,7 +60,6 @@ footer{
 
 .image {
   background-repeat: no-repeat;
-  background-image: linear-gradient(0.4, 0.8, 0.8, 1);
   background-size: 77% 100%;
   background-position: center;
   height: 50vh;
@@ -74,16 +72,41 @@ footer{
   padding: 0 20px;
   transition: background-image 0.1s ease;
 }
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* caché par défaut */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#topBtn:hover {
+    background-color: #555;
+    transform: translateY(2px);
+}
+#topBtn:active {
+    transform: scale(0.95);
+}
 #decouvrir{
     background-color: #4eda71;
     border: none;
     border-radius: 5px;
     padding: 5px;
     transition: all 0.3s ease;
+    
 }
 #decouvrir:hover{
     background-color: rgb(72, 197, 103);
     transform: translateY(-2px);
+    box-shadow: 1px 1px 5px 4px rgb(40, 241, 225);
 }
 #decouvrir:active{
     transform: scale(0.95);
@@ -108,7 +131,24 @@ img{
     text-align: left;
 }
 
-/*commence header*/
+@media screen and (orientation: portrait) and (max-width: 675px){
+    .main {
+        margin-left: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .main p {
+        margin-left: 0;
+        text-align: left;
+    }
+    .presentation {
+        padding: 40px;
+        justify-content: flex-start;
+    }
+    .image{
+        width: 250px;
+    }
+}
 header{
     display: flex;
     flex-direction: row;
@@ -165,46 +205,5 @@ header{
         display: flex;
         flex-direction: column;
         width: 90vw;
-    }
-}
-/*fin header*/
-#topBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: none; /* caché par défaut */
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-#topBtn:hover {
-    background-color: #555;
-    transform: translateY(2px);
-}
-#topBtn:active {
-    transform: scale(0.95);
-}
-@media screen and (orientation: portrait) and (max-width: 675px){
-    .main {
-        margin-left: 0;
-        display: flex;
-        justify-content: flex-start;
-    }
-    .main p {
-        margin-left: 0;
-        text-align: left;
-    }
-    .presentation {
-        padding: 40px;
-        justify-content: flex-start;
-    }
-    .image{
-        width: 250px;
     }
 }
