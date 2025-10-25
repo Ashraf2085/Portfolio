@@ -5,6 +5,7 @@
   align-items: center;
   min-height: 70vh;
   background: linear-gradient(135deg, #f0f4ff, #dfe9f3);
+  padding: 5px;
 }
 
 /* Le formulaire */
